@@ -28,9 +28,8 @@ function onFormSubmit(event) {
 
   console.log(formData);
 
-  form.reset();
   localStorage.removeItem(STORAGE_KEY);
-
+  form.reset();
   formData.email = '';
   formData.message = '';
 }
@@ -43,5 +42,8 @@ function populateForm() {
 
     emailInput.value = email;
     msgTextarea.value = message;
+
+    formData.email = email;
+    formData.message = message;
   }
 }

@@ -68,9 +68,7 @@ const images = [
 ];
 
 const container = document.querySelector('.gallery');
-container.addEventListener('click', event => {
-  event.preventDefault();
-});
+
 container.insertAdjacentHTML('beforeend', createCardsMarkup(images));
 function createCardsMarkup(cards) {
   return cards
